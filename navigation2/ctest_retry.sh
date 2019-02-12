@@ -14,6 +14,6 @@ for ((i=1;i<=total;i++))
       ((fail++))
     fi
   done
-echo "Test failed " $total " times."
-echo "Run Ctest " $total "succeed " "$fail"
+echo "Test failed " $((total-fail)) " times."
+echo "Run Ctest : " $total "succeed :" "$fail"
 echo "Run Ctest " $total "succeed " "$fail" > Ctest_retry.log
